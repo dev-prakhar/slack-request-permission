@@ -21,11 +21,11 @@ Every slack app that needs to interact with any server needs to be verified (ver
 
 This package offers you:
 
-* Out-of-the-box `Django` permission class that can be used to authenticate slack requests
-* Framework for creating your own permission class for any slack app
-* A standalone method to verify slack request
+* [Out-of-the-box `Django` permission class that can be used to authenticate slack requests](#out-of-the-box)
+* [Framework for creating your own permission class for any slack app](#framework)
+* [A standalone method to verify slack request](#standalone-method)
 
-### Out of the Box Permission Class
+### Out-of-the-box
 
 To use out of the box permission class, all you have to do is add the class into permission classes of
 [Django Rest Framework](https://www.django-rest-framework.org/tutorial/3-class-based-views/).
@@ -44,7 +44,7 @@ SLACK_APP_SIGNING_SECRET = {YOUR_SLACK_APP_SIGNING_SECRET}
 
 The view will verify that the incoming request is from slack before running anything.
 
-### Framework for creation of custom permission class
+### Framework
 
 There might come a use case where you have different slack apps with different `signing_secrets` interacting with your
 backend. In that case, you can create your own custom permission class
@@ -74,7 +74,7 @@ class MySlackApp2View(APIView):
     permission_classes = (MySlackApp2Permission,)
 ```
 
-### Standalone Method to Verify Slack Request
+### Standalone-Method
 There might be cases when you don't want to use permission classes.
 You can directly use the method that verifies slack request
 
