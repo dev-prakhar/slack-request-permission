@@ -17,7 +17,7 @@ def requirements():
 
 setuptools.setup(
     name='slack-request-permission',
-    version='1.0.3',
+    version='1.0.5',
     author="Prakhar Shrivastava",
     author_email="prakhars1996@gmail.com",
     description="A python package that authenticates that the request is coming from slack",
